@@ -57,11 +57,21 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        calculator: {
+          bg: "#071622",
+          card: "#070C10",
+          red: "#E84040",
+          purple: "#AC7FF4",
+          "text-light": "#AFC4D5",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
