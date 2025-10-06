@@ -1,9 +1,7 @@
 import { useState } from "react";
+import { Calculator } from "../components/Calculator";
 
 export default function Index() {
-  const [display, setDisplay] = useState("180");
-  const [expression, setExpression] = useState("45 x 8 ÷ 2");
-
   return (
     <div className="min-h-screen bg-calculator-bg relative overflow-hidden font-poppins">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16">
@@ -44,98 +42,8 @@ export default function Index() {
                   />
                 </svg>
               </div>
-
-              {/* Display */}
-              <div className="mb-8">
-                <div className="text-white text-right text-lg font-bold mb-2 opacity-80">
-                  {expression}
-                </div>
-                <div className="text-white text-right text-7xl font-bold leading-tight">
-                  {display}
-                </div>
-              </div>
-
-              {/* Buttons */}
-              <div className="space-y-4">
-                <div className="grid grid-cols-4 gap-3.5">
-                  <button className="text-white text-4xl font-bold h-14 flex items-center justify-center hover:opacity-80 transition">
-                    c
-                  </button>
-                  <button className="text-white text-3xl font-bold h-14 flex items-center justify-center hover:opacity-80 transition">
-                    %
-                  </button>
-                  <button className="text-white text-4xl font-bold h-14 flex items-center justify-center hover:opacity-80 transition">
-                    ±
-                  </button>
-                  <button className="text-calculator-red text-4xl font-bold h-14 flex items-center justify-center hover:opacity-80 transition">
-                    ÷
-                  </button>
-                </div>
-
-                <div className="grid grid-cols-4 gap-3.5">
-                  <button className="text-white text-4xl font-bold h-14 flex items-center justify-center hover:opacity-80 transition">
-                    7
-                  </button>
-                  <button className="text-white text-4xl font-bold h-14 flex items-center justify-center hover:opacity-80 transition">
-                    8
-                  </button>
-                  <button className="text-white text-4xl font-bold h-14 flex items-center justify-center hover:opacity-80 transition">
-                    9
-                  </button>
-                  <button className="text-calculator-red text-4xl font-bold h-14 flex items-center justify-center hover:opacity-80 transition">
-                    ×
-                  </button>
-                </div>
-
-                <div className="grid grid-cols-4 gap-3.5">
-                  <button className="text-white text-4xl font-bold h-14 flex items-center justify-center hover:opacity-80 transition">
-                    4
-                  </button>
-                  <button className="text-white text-4xl font-bold h-14 flex items-center justify-center hover:opacity-80 transition">
-                    5
-                  </button>
-                  <button className="text-white text-4xl font-bold h-14 flex items-center justify-center hover:opacity-80 transition">
-                    6
-                  </button>
-                  <button className="text-calculator-red text-4xl font-bold h-14 flex items-center justify-center hover:opacity-80 transition">
-                    -
-                  </button>
-                </div>
-
-                <div className="grid grid-cols-4 gap-3.5">
-                  <button className="text-white text-4xl font-bold h-14 flex items-center justify-center hover:opacity-80 transition">
-                    1
-                  </button>
-                  <button className="text-white text-4xl font-bold h-14 flex items-center justify-center hover:opacity-80 transition">
-                    2
-                  </button>
-                  <button className="text-white text-4xl font-bold h-14 flex items-center justify-center hover:opacity-80 transition">
-                    3
-                  </button>
-                  <button className="text-calculator-red text-4xl font-bold h-14 flex items-center justify-center hover:opacity-80 transition">
-                    +
-                  </button>
-                </div>
-
-                <div className="grid grid-cols-4 gap-3.5">
-                  <button className="h-14 flex items-center justify-center hover:opacity-80 transition">
-                    <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/dca476ff8bf5811b98eafa6b5c472e3ed2a79884?width=102"
-                      alt="backspace"
-                      className="w-12 h-12 object-contain"
-                    />
-                  </button>
-                  <button className="text-white text-4xl font-bold h-14 flex items-center justify-center hover:opacity-80 transition">
-                    0
-                  </button>
-                  <button className="text-white text-4xl font-bold h-14 flex items-center justify-center hover:opacity-80 transition">
-                    .
-                  </button>
-                  <button className="bg-calculator-red text-white text-4xl font-bold h-14 flex items-center justify-center rounded-lg shadow-lg hover:opacity-90 transition">
-                    =
-                  </button>
-                </div>
-              </div>
+              
+              <Calculator />
             </div>
           </div>
 
