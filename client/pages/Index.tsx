@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Calculator } from "../components/Calculator";
 
 export default function Index() {
@@ -48,7 +47,10 @@ export default function Index() {
 
           {/* Content */}
           <div className="flex-1 text-center lg:text-left">
-            <h2 className="text-6xl font-bold text-white mb-8">Modified</h2>
+            {/* Second Edition Badge */}
+            <div className="mb-8">
+              <h2 className="text-xl font-bold text-white">Second Edition</h2>
+            </div>
 
             <div className="mb-8 flex items-center justify-center lg:justify-start gap-6">
               <img
@@ -87,7 +89,7 @@ export default function Index() {
               </svg>
             </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 tracking-tight">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-calculator-red leading-tight mb-6 tracking-tight">
               Calculator
               <br />
               Design to code

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 export function Calculator() {
-  const [display, setDisplay] = useState("0");
-  const [expression, setExpression] = useState("");
+  const [display, setDisplay] = useState("180");
+  const [expression, setExpression] = useState("45 x 8 ÷ 2");
   const [firstNumber, setFirstNumber] = useState("");
   const [operation, setOperation] = useState("");
   const [newNumber, setNewNumber] = useState(true);
@@ -10,6 +10,7 @@ export function Calculator() {
   const handleNumber = (num: string) => {
     if (newNumber) {
       setDisplay(num);
+      setExpression("");
       setNewNumber(false);
     } else {
       setDisplay(display === "0" ? num : display + num);
@@ -50,7 +51,7 @@ export function Calculator() {
         return;
     }
 
-    setExpression(`${firstNumber} ${operation} ${display} =`);
+    setExpression(`${firstNumber} ${operation} ${display}`);
     setDisplay(result.toString());
     setFirstNumber("");
     setOperation("");
@@ -58,18 +59,26 @@ export function Calculator() {
   };
 
   const clear = () => {
-    setDisplay("0");
-    setExpression("");
+    setDisplay("180");
+    setExpression("45 x 8 ÷ 2");
     setFirstNumber("");
     setOperation("");
     setNewNumber(true);
+  };
+
+  const handleBackspace = () => {
+    if (display.length > 1) {
+      setDisplay(display.slice(0, -1));
+    } else {
+      setDisplay("0");
+    }
   };
 
   return (
     <>
       {/* Display */}
       <div className="mb-8">
-        <div className="text-white text-right text-lg font-bold mb-2 opacity-80">
+        <div className="text-white text-right text-lg font-bold mb-2 h-6">
           {expression}
         </div>
         <div className="text-white text-right text-7xl font-bold leading-tight">
@@ -155,9 +164,12 @@ export function Calculator() {
         </div>
 
         <div className="grid grid-cols-4 gap-3.5">
-          <button className="h-14 flex items-center justify-center hover:opacity-80 transition">
+          <button 
+            className="h-14 flex items-center justify-center hover:opacity-80 transition"
+            onClick={handleBackspace}
+          >
             <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/dca476ff8bf5811b98eafa6b5c472e3ed2a79884?width=102"
+              src="https://api.builder.io/api/v1/image/assets/TEMP/6c83b1507310274668de23ebd3b21e56e865e33a?width=102"
               alt="backspace"
               className="w-12 h-12 object-contain"
             />
