@@ -58,7 +58,7 @@ export default function Index() {
 
             {/* Cursor Edition Badge */}
             <div className="mb-8">
-              <h2 className="text-xl font-bold text-white">Cursor Edition III</h2>
+              <h2 className="text-xl font-bold text-white">Cursor Edition IV</h2>
             </div>
 
             <div className="mb-8 flex items-center justify-center lg:justify-start gap-6">
@@ -100,9 +100,9 @@ export default function Index() {
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 tracking-tight">
               <span className="text-calculator-red">Calc</span>
-              <span style={{ color: '#40E8B3' }}>ulator</span>
+              <span className="text-[#2E9896]">ulator</span>
               <br />
-              <span style={{ color: '#40E8B3' }}>Design to c</span>
+              <span className="text-[#2E9896]">Design to c</span>
               <span className="text-calculator-red">ode</span>
             </h1>
 
