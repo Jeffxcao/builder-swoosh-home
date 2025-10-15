@@ -46,10 +46,19 @@ export default function Index() {
           </div>
 
           {/* Content */}
-          <div className="flex-1 text-center lg:text-left">
-            {/* Sixth Edition Badge */}
+          <div className="flex-1 text-center lg:text-left relative">
+            {/* Builder.io Logo - Top Right */}
+            <div className="absolute -top-12 right-0 hidden lg:block">
+              <img
+                src="https://api.builder.io/api/v1/image/assets/TEMP/914ad0af17c9d50dae779aa1496fc38c47aaabe0?width=354"
+                alt="Builder.io logo"
+                className="w-44 h-auto"
+              />
+            </div>
+
+            {/* Cursor Edition Badge */}
             <div className="mb-8">
-              <h2 className="text-xl font-bold text-white">Sixth Edition</h2>
+              <h2 className="text-xl font-bold text-white">Cursor Edition I</h2>
             </div>
 
             <div className="mb-8 flex items-center justify-center lg:justify-start gap-6">
@@ -89,7 +98,7 @@ export default function Index() {
               </svg>
             </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6 tracking-tight" style={{ color: '#E840AA' }}>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 tracking-tight text-calculator-red">
               Calculator
               <br />
               Design to code
@@ -107,11 +116,12 @@ export default function Index() {
               </a>
             </p>
 
-            <div className="mt-8">
+            {/* Builder.io Logo - Mobile */}
+            <div className="mt-8 lg:hidden">
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/914ad0af17c9d50dae779aa1496fc38c47aaabe0?width=354"
                 alt="Builder.io logo"
-                className="w-44 h-auto mx-auto lg:mx-0"
+                className="w-44 h-auto mx-auto"
               />
             </div>
           </div>
