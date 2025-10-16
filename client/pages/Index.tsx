@@ -58,7 +58,7 @@ export default function Index() {
 
             {/* Cursor Edition Badge */}
             <div className="mb-8">
-              <h2 className="text-xl font-bold text-white">Cursor Edition IV</h2>
+              <h2 className="text-xl font-bold text-white">Cursor Edition V</h2>
             </div>
 
             <div className="mb-8 flex items-center justify-center lg:justify-start gap-6">
